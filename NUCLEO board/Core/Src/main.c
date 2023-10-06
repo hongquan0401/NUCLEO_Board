@@ -19,7 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "button.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -97,10 +97,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, SET);
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  if (isButton1Pressed() == 1){
+		  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+	  }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
