@@ -270,13 +270,9 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-int counter = 1;
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-	counter--;
-	if (counter <= 0){
-		counter = 1;
-		HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-	}
+	getKeyInput();
 }
 /* USER CODE END 4 */
 

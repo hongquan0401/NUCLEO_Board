@@ -4,4 +4,4 @@ main.c:152:13:MX_TIM2_Init	32	static
 main.c:197:13:MX_USART2_UART_Init	8	static
 main.c:230:13:MX_GPIO_Init	40	static
 main.c:274:6:HAL_TIM_PeriodElapsedCallback	16	static
-main.c:287:6:Error_Handler	4	static,ignoring_inline_asm
+main.c:283:6:Error_Handler	4	static,ignoring_inline_asm
